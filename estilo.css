@@ -1,122 +1,128 @@
-/* EXERCÍCIO 1: fontes */
-/* importá-las aqui... e definir as `font-family` da turminha... */
-
+/* Importa o arquivo CSS que importa a fonte Ravie */
+@import "fonts/ravie.css";
 
 body {
-  background-color: #fff;
+    font-family: "Verdana", sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin: 0;
 }
 
-strong {
-  color: #d027aa;
+#recipiente,
+#cardapio {
+    box-sizing: border-box;
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    position: relative;
+    background-image: linear-gradient(#f6f1b2, #4599b2);
 }
 
-#cardapio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+header, #cardapio, footer {
+    width: 646px;
+    margin-left: 153px;
 }
 
-#cardapio h3 {
-  font-size: 18px;
-  color: #333;
-  margin-top: 30px;
+header {
+    text-align: center;
 }
 
-#cardapio article {
-  font-size: 14px;
-  color: #333;
+header h1 {
+    font-family: "Ravie";
+    font-size: 36px;
+    color: #e90c0c;
+    margin-top: 30px;
+    margin-bottom: 0;
+    position: relative; left: -36px;
 }
 
-
-/* EXERCÍCIO 2: layout da página */
-#recipiente {
-  /* layout da página aqui */
-  /* ... */
-  /* ... */
-  /* ... */
-  /* ... */
+header h2 {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative; right: -48px;
 }
 
-#cabecalho-pagina {
+header h1, h2 {
+    font-weight: normal;
+}
 
+header h2 em {
+    color: #d027aa;
+    font-style: normal;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0;
 }
 
 #lateral {
+    width: 154px;
+    position: absolute; top: 0; left: 0; bottom: 0; right: 0;
+}
 
+#lateral h2 {
+    font-weight: bold;
+    font-size: 48px;
+    position: absolute; top: 32%; left: -25%;
+    transform: rotate(270deg);
+}
+
+img[src$="siri.png"] {
+   position: absolute; top: 7px; left: -10px;
+}
+
+img[src$="bolhas.png"] {
+   position: absolute; right: 20px; bottom: 125px; /* peixe height + 14px */
+}
+
+img[src$="peixe.png"] {
+   position: absolute; left: -44px; bottom: 0;
+}
+
+img[src$="cartoes.png"] {
+   position: absolute; top: 46px; right: 15px; bottom: 25px;
 }
 
 #cardapio {
-
+    line-height: 2em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    border: 1px solid #aac0ae;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-#rodape-pagina {
-
+ul {
+    margin-top: 0;
+    margin-bottom: 2.5em;
+    padding: 0;
 }
 
-
-
-/* EXERCÍCIO 3: cabeçalho da página */
-#cabecalho-pagina {
-
+li {
+    list-style: none;
+    position: relative;
 }
 
-#cabecalho-pagina h1 {
-  margin: 0;
-  font-size: 36px;
-  color: #e90c0c;
-  font-weight: normal;
+.preço {
+    position: absolute; right: 1em;
 }
 
-#cabecalho-pagina h2 {
-  margin: 0;
-  font-size: 24px;
-  color: #333;
-  font-weight: normal;
+footer {
+    height: 116px;
+    position: relative;
 }
 
-/* EXERCÍCIO 4: cada item do menu */
-article {
-}
-
-
-/* EXERCÍCIO 5: o rodapé */
-#rodape-pagina {
-}
-
-/* EXERCÍCIO 6: lateral */
-#lateral {
-}
-
-
-/* EXERCÍCIO 7: o ticket */
 #ticket {
+    position: fixed; top: 295px; left: -69px; /* - ticket width + 89px */
+    transition: left 100ms ease-out; /* propriedade, duração, interpolação */
 }
 
 #ticket:hover {
+  left: 0;
 }
-
-
-/* EXERCÍCIO 8: deslocamento no siri e peixe */
-#siri {
-}
-
-#peixe {
-}
-
-/* EXERCÍCIO 9: bolhas - no HTML e no JS */
-/* --- */
-
-
-/* EXERCÍCIO 10: modo escuro */
-/* no início deste arquivo (depois dos @import), coloque
-   as custom properties */
-/* coloque aqui a media query para sobrescrever o valor
-   das custom properties para o modo escuro */
-
